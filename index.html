@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Yasmin's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Styling for the date-time display */
+        #date-time {
+            display: inline-block;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            padding: 5px 15px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0 2px 5px rgb(255, 180, 73, 0.5);
+            margin-left: 10px;
+        }
+        /* Styling for Play Music Button */
+        #play-music-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3E2723;
+            color: #FFD180;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        #play-music-btn:hover {
+            background-color: #FFD180;
+            color: #3E2723;
+        }
+
+        /* General Page Styling */
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav {
+            background-color: #3E2723;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        #clock {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #555;
+        }
+
+        footer {
+            background-color: #3E2723;
+            color: #555;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Background Audio -->
+<audio id="background-audio" control loop>
+    <source src="biodata music.mp3" type="audio/mpeg">
+    <source src="biodata music.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+
+<header>
+    <nav>
+        <h1 style="color: #FFD180;">Yasmin's Tales &hearts;</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">About Me</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section style ="background-color: #FFD180;">
+    <marquee width="100%" scrolldelay="200"><br>
+        Here I will tell you about myself, my experience, education, family and moreee <33
+    </marquee>
+    <video autoplay muted loop controls width= "100%">
+        <source src="welcome video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="clock"></div>
+</section>
+
+<!-- Play Music Button -->
+<button id="play-music-btn">Play Music</button>
+
+<footer id="footer">
+    <p>&copy; 2024 Yasmin's Website. All Rights Reserved. <span id="date-time"></span></p>
+</footer>
+
+<script>
+// Function to format the date and time with an icon
+function updateDateTime() {
+    const dateTimeSpan = document.getElementById('date-time');
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = now.toLocaleDateString('en-GB', options);
+    const formattedTime = now.toLocaleTimeString('en-GB', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+
+    dateTimeSpan.innerHTML = `<i class="fas fa-clock"></i> ${formattedDate}, ${formattedTime}`;
+}
+
+// Update date and time on page load and refresh every second
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
+// Music Button Interaction
+const audio = document.getElementById('background-audio');
+const playMusicBtn = document.getElementById('play-music-btn');
+
+// Add click event to the button
+playMusicBtn.addEventListener('click', () => {
+    audio.play()
+        .then(() => {
+            console.log('Audio is playing!');
+            playMusicBtn.textContent = 'Playing...';
+            playMusicBtn.disabled = true;
+            playMusicBtn.style.backgroundColor = '#4CAF50';
+            setTimeout(() => playMusicBtn.style.display = 'none', 1500); // Optional: Hide the button after playing
+        })
+        .catch(error => {
+            console.error('Error playing audio:', error);
+            alert('Audio playback failed. Please check file or autoplay settings.');
+        });
+});
+</script>
+</body>
+</html>
