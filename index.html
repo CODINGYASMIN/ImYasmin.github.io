@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Yasmin's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Background Audio -->
+<audio id="background-audio" control loop>
+    <source src="biodata music.mp3" type="audio/mpeg">
+    <source src="biodata music.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+
+<header>
+    <nav>
+        <h1 style="color: #FFD180;">Yasmin's Tales &hearts;</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">About Me</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <!-- Search Box -->
+        <form action="javascript:void(0);" class="search-box" id="search-form">
+            <input type="text" id="search-query" placeholder="Search..." aria-label="Search">
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+</header>
+
+<section style="background-color: #FFD180;">
+    <marquee width="100%" scrolldelay="200"><br>
+        ୨୧ ⊹ Here I will tell you about <b>myself</b>, <u>my experience</u>, <i>education</i>, <sub>family</sub> and <sup>moreee</sup>×♡³
+    </marquee>
+    <video autoplay muted loop controls width="100%">
+        <source src="welcome video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="clock"></div>
+</section>
+
+<!-- Add this to the HTML to display search results below the search box -->
+<div id="search-results" style="display:none;">
+    <h2>Search Results</h2>
+    <ul id="results-list"></ul>
+</div>
+
+<!-- Play Music Button -->
+<button id="play-music-btn">Play Music</button>
+
+<footer id="footer">
+    <p>&copy; 2024 Yasmin's Website. All Rights Reserved. <span id="date-time"></span></p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
