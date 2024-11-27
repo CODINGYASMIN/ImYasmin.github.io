@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorin Company</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Poppin, sans-serif;
+        }
+
+        /* Background Styling */
+        body {
+            background-image: url('gorin background.gif'); /* Replace with your GIF's file path */
+            background-size: cover; /* Scales the GIF to cover the entire viewport */
+            background-repeat: no-repeat; /* Prevents the GIF from repeating */
+            background-position: center; /* Centers the GIF */
+            height: 100vh; /* Ensures the background covers the entire viewport height */
+            overflow: hidden; /* Hides scrollbars if necessary */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        h2 {
+            background-color: rgba(160, 82, 45, 0.8); /* Semi-transparent background */
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Gallery Styling */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Zoom-in effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: auto;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer a {
+            color: #FFA07A;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Gorin Company</h2>
+
+    <!-- Responsive Image Gallery -->
+    <div class="gallery">
+        <img src="working1.jpg" alt="Gorin Teamwork">
+        <img src="working2.jpg" alt="Gorin Meeting">
+        <img src="working3.jpg" alt="Gorin Innovation">
+        <img src="working4.jpg" alt="Gorin Progress">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Gorin Company. Designed by <a href="#">Yasmin</a>.
+    </footer>
+</body>
+</html>
