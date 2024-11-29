@@ -1,0 +1,151 @@
+/* General Page Styling */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3E2723;
+    color: #fff;
+    padding: 10px 20px; /* Increased padding for more space around */
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Add max width to limit expansion */
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+}
+
+/* Search Box Styling */
+.search-box {
+    display: flex;
+    align-items: left;
+    gap: 5px;
+    margin-left: auto; /* Align search to the right */
+}
+
+.search-box input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; /* Set width for better alignment */
+}
+
+.search-box button {
+    background-color: #FFD180;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #3E2723;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #FFAB40;
+}
+
+/* Search Results Styling */
+#search-results {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#search-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+#search-results li {
+    margin: 10px 0;
+}
+
+#search-results a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+#search-results a:hover {
+    text-decoration: underline;
+}
+ #clock {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #555;
+}
+
+footer {
+    background-color: #3E2723;
+    color: #555;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styling for the date-time display */
+#date-time {
+    display: inline-block;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 2px 5px rgba(255, 180, 73, 0.5);
+    margin-left: 10px;
+}
+
+/* Styling for Play Music Button */
+#play-music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3E2723;
+    color: #FFD180;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+#play-music-btn:hover {
+    background-color: #FFD180;
+    color: #3E2723;
+}
