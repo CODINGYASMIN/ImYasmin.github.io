@@ -237,7 +237,7 @@ section {
     border-radius: 30%;
 }
 
-.home-img img {
+.home-img video {
     position: relative;
     height: 320px; /* Standard height */
     object-fit: cover; /* Ensures content fits within the frame */
