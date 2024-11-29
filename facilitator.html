@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilitator</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins, sans-serif;
+        }
+
+        /* Background Styling */
+        body {
+            background-image: url('facilitator background.gif'); /* Replace with your GIF's file path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            overflow: auto;
+            color: white;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        h2 {
+            background-color: rgba(160, 82, 45, 0.8);
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-out;
+            margin: 20px auto;
+            display: inline-block;
+        }
+
+        /* Gallery Styling */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .gallery img, .gallery video {
+            width: 100%;
+            height: 200px; /* Standard height */
+            object-fit: cover; /* Ensures content fits within the frame */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover, .gallery video:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .video-container {
+            text-align: center; /* Center video and captions */
+        }
+
+        .video-container p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6); /* Add background for readability */
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer a {
+            color: #FFA07A;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Facilitator</h2>
+
+    <!-- Responsive Image and Video Gallery -->
+    <div class="gallery">
+        <!-- Videos -->
+        <div class="video-container">
+            <video controls autoplay muted>
+                <source src="fasi video1.mp4" type="video/mp4">
+                Your browser does not support the video tag. <a href="fasi video1.mp4" download>Download Video 1</a>
+            </video>
+        </div>
+
+        <div class="video-container">
+            <video controls autoplay muted>
+                <source src="fasi video2.mp4" type="video/mp4">
+                Your browser does not support the video tag. <a href="fasi video2.mp4" download>Download Video 2</a>
+            </video>
+        </div>
+
+        <!-- Images -->
+        <img src="fasi photo1.jpg" alt="Elementary school student activity">
+        <img src="fasi photo2.jpg" alt="Facilitator team">
+        <img src="fasi photo3.jpg" alt="Meeting">
+        <img src="fasi photo4.jpg" alt="Atmosphere">
+        <img src="fasi photo5.jpg" alt="Elementary school student">
+        <img src="fasi photo6.jpg" alt="Atmosphere">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Facilitator. Designed by <a href="#">Yasmin</a>.
+    </footer>
+</body>
+</html>
