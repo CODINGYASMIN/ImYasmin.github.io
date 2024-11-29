@@ -233,21 +233,19 @@ section {
 }
 
 /* Profile Image */
-.home-img {
-    border-radius: 30%;
-}
-
 .home-img video {
     position: relative;
     height: 320px; /* Standard height */
-    object-fit: cover; /* Ensures content fits within the frame */
-    width: 20vw;
-    border-radius: 30%;
-    box-shadow: 0 0 25px solid #A0522D; /* Updated Shadow Color */
-    cursor: pointer;
-    transition: 0.2s linear;
-    animation: moveImage 20s infinite alternate; /* Add animation */
+    object-fit: cover; /* Ensure the video fits within the frame */
+    width: 20vw;; /* Adjust width to fit the container */
+    border-radius: 30%; /* Add rounded corners */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7); /* Updated shadow effect */
+    cursor: pointer; /* Optional: Pointer cursor on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+    animation: moveImage 20s infinite alternate; /* Floating effect */
 }
+
+/* Keyframe animation for floating effect */
 @keyframes moveImage {
     0% {
         transform: translateY(0);
