@@ -1,3 +1,30 @@
+// Typing Effect
+const textArray = ["Diploma Student", "Anime Lover", "Book Lover"];
+let arrayIndex = 0, letterIndex = 0;
+function typeText() {
+    const dynamicText = document.getElementById("dynamic-text");
+    if (letterIndex < textArray[arrayIndex].length) {
+        dynamicText.textContent += textArray[arrayIndex][letterIndex];
+        letterIndex++;
+        setTimeout(typeText, 150);
+    } else {
+        setTimeout(eraseText, 1000);
+    }
+}
+function eraseText() {
+    const dynamicText = document.getElementById("dynamic-text");
+    if (letterIndex > 0) {
+        dynamicText.textContent = textArray[arrayIndex].substring(0, letterIndex - 1);
+        letterIndex--;
+        setTimeout(eraseText, 100);
+    } else {
+        arrayIndex = (arrayIndex + 1) % textArray.length;
+        setTimeout(typeText, 500);
+    }
+}
+document.addEventListener("DOMContentLoaded", typeText);
+
+
 let now_playing = document.querySelector('.now-playing');
 let track_art = document.querySelector('.track-art');
 let track_name = document.querySelector('.track-name');
